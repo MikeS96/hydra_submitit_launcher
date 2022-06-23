@@ -71,6 +71,8 @@ class SlurmQueueConf(BaseQueueConf):
     additional_parameters: Dict[str, Any] = field(default_factory=dict)
     # Maximum number of jobs running in parallel
     array_parallelism: int = 256
+    # Interpreter used to launch the job
+    python: Optional[str] = None
     # A list of commands to run in sbatch befure running srun
     setup: Optional[List[str]] = None
 
